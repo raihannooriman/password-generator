@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="script.js" defer></script>
+    <link href="final.css" rel="stylesheet" />
+    <title>Password Generator</title>
+  </head>
+  <body
+    class="bg-neutral-700 text-white flex justify-center items-center min-h-[100vh] m-0"
+  >
+    <div class="flex flex-col items-center px-4">
+      <div class="bg-sky-600 p-12 rounded-2xl border-black border-2 border-solid flex justify-center item-center flex-col"">
+        <h1 class="text-4xl mb-4 text-center">Password Generator</h1>
+        <h3 class="bg-white text-black mb-4 p-4 border border-solid h-4 w-full flex justify-center items-center break-all rounded-lg" id="passwordDisplay" id="passwordDisplay">password</h3>
+        <form id="passwordGeneratorForm" class="grid grid-cols-2 gap-x-12 gap-y-4 justify-center">
+          <label for="characterAmountNumber">Number Of Characters</label>
+          <div class="flex items-center gap-2">
+            <input
+              type="range"
+              min="1"
+              max="50"
+              value="10"
+              id="characterAmountRange"
+            />
+            <input
+              type="number"
+              min="1"
+              max="50"
+              value="10"
+              id="characterAmountNumber"
+              class="text-black w-8"
+            />
+          </div>
+
+          <label for="includeUppercase">Include Uppercase</label>
+          <input type="checkbox" id="includeUppercase" />
+
+          <label for="includeNumbers">Include Numbers</label>
+          <input type="checkbox" id="includeNumbers" />
+
+          <label for="includeSymbols">Include Symbols</label>
+          <input type="checkbox" id="includeSymbols" />
+
+          <button type="submit" class="col-span-2 bg-transparent border-[2px] border-solid border-white text-white pl-2 pr-4 font-bold rounded-2xl hover:bg-sky-500">Generate Password</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
